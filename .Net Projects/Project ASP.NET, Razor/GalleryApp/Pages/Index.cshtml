@@ -1,0 +1,97 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<style type="text/css">
+    #searchInput {
+        width:300px;
+        border-radius:15px;
+        background-color:#EFC050;
+        text-align:center;
+    }
+    #searchBtn{
+        font-size:20px;
+        background-color:black;
+        color:white;
+        cursor:pointer;
+        border: 1px solid grey;
+    }
+    #searchBtn:hover{
+        background-color:white;
+        color:black;
+    }
+    .image-border{
+        padding:5px;
+        border: 1px solid #021a40;
+        background-color: #ff0;
+    }
+    #main{
+        text-align:center;
+        background-color:burlywood;
+    }
+   
+    #tag:hover{
+        
+        cursor:pointer;
+    }
+    .tags-item:hover{
+        cursor:pointer;
+    }
+</style>
+
+<div id="main">
+    <div class="text-center">
+        <h1 class="display-4">Welcome to your gallery:</h1>
+        <p>You can search for photos and see photos properties!</p>
+        <br>
+    </div>
+
+    <form id="searchForm">
+        <p>
+            Search bar:<br />
+            <input id="searchInput" type="text" asp-for="SearchString" />
+            <br />
+            <input id="searchBtn" type="submit" value="SEARCH" />
+        </p>
+    </form>
+
+    <div id="gallery">
+        @{
+            if (Model.Searches.Count() > 0)
+            {
+                <p class="display-4">Search results</p>
+                <p style="font-size:20px;">Found <bold>@Model.Searches.Count() </bold>results.</p>
+            }
+            for (int i = 0; i < Model.Searches.Count(); i++)
+            {
+
+                if (Model.Searches[i].Contains(".mp4"))
+                {
+                    <p>Video <bold>@Model.ImageTitles[i]</bold></p>
+                    <video autoplay loop controls="controls" style="height:300px;width:300px;">
+                        <source src="~/@Model.Searches[i]" type="video/mp4" />
+                    </video>
+                }
+                else
+                {
+                    <p>Image <bold>@Model.ImageTitles[i]</bold></p>
+                    <img class="image-border" src="~/@Model.Searches[i]" alt="image" width="300" height="300" />
+                }
+                <p>Description:<span class="tag"> @Model.TagsForEachImage[i] </span></p>
+            }
+
+        }
+    </div>
+    <div class="text-center">
+        <p class="display-4">Tags:</p>
+        @{
+            for (int i = 0; i < Model.Properties.Count(); i++)
+            {
+                <p class="tags-item" onclick="FillSearch(this.id)" id="@i" >#@Model.Properties[i]</p>
+            }
+        }
+    </div>
+</div>
+ 
+

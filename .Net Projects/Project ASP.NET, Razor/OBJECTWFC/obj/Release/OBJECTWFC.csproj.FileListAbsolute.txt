@@ -1,0 +1,13 @@
+C:\Users\acer\source\repos\PROIECT_GALERIE\OBJECTWFC\bin\Release\OBJECTWFC.dll
+C:\Users\acer\source\repos\PROIECT_GALERIE\OBJECTWFC\bin\Release\OBJECTWFC.pdb
+C:\Users\acer\source\repos\PROIECT_GALERIE\OBJECTWFC\bin\Release\PROIECT_GALERIE.dll
+C:\Users\acer\source\repos\PROIECT_GALERIE\OBJECTWFC\bin\Release\System.ServiceModel.Primitives.dll
+C:\Users\acer\source\repos\PROIECT_GALERIE\OBJECTWFC\bin\Release\EntityFramework.dll
+C:\Users\acer\source\repos\PROIECT_GALERIE\OBJECTWFC\bin\Release\PROIECT_GALERIE.pdb
+C:\Users\acer\source\repos\PROIECT_GALERIE\OBJECTWFC\bin\Release\PROIECT_GALERIE.dll.config
+C:\Users\acer\source\repos\PROIECT_GALERIE\OBJECTWFC\bin\Release\System.ServiceModel.Primitives.pdb
+C:\Users\acer\source\repos\PROIECT_GALERIE\OBJECTWFC\bin\Release\EntityFramework.xml
+C:\Users\acer\source\repos\PROIECT_GALERIE\OBJECTWFC\obj\Release\OBJECTWFC.csprojAssemblyReference.cache
+C:\Users\acer\source\repos\PROIECT_GALERIE\OBJECTWFC\obj\Release\OBJECTWFC.csproj.CopyComplete
+C:\Users\acer\source\repos\PROIECT_GALERIE\OBJECTWFC\obj\Release\OBJECTWFC.dll
+C:\Users\acer\source\repos\PROIECT_GALERIE\OBJECTWFC\obj\Release\OBJECTWFC.pdb

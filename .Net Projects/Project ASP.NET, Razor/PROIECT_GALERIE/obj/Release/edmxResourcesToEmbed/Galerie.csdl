@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Galerie" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="GalerieContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="PropertiesSet" EntityType="Galerie.Properties" />
+    <EntitySet Name="MediaSet" EntityType="Galerie.Media" />
+    <AssociationSet Name="MediaProperties" Association="Galerie.MediaProperties">
+      <End Role="Media" EntitySet="MediaSet" />
+      <End Role="Properties" EntitySet="PropertiesSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Properties">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Description" Type="String" Nullable="false" />
+    <NavigationProperty Name="Media" Relationship="Galerie.MediaProperties" FromRole="Properties" ToRole="Media" />
+    <Property Name="MediaId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Media">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="Path" Type="String" Nullable="false" />
+    <NavigationProperty Name="Properties" Relationship="Galerie.MediaProperties" FromRole="Media" ToRole="Properties" />
+  </EntityType>
+  <Association Name="MediaProperties">
+    <End Type="Galerie.Media" Role="Media" Multiplicity="1" />
+    <End Type="Galerie.Properties" Role="Properties" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Media">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Properties">
+        <PropertyRef Name="MediaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

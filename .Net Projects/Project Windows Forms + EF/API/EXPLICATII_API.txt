@@ -1,0 +1,5 @@
+În folderul CLASE din acest folder se află două fișiere.cs.
+TryConnect.cs cuprinde acel class library ce interacționează cu baza de date.
+API.cs este o clasă din cadrul GUI ce are metode scurte ce trimit datele din interfață la funcții din class library TryConnect.cs și primesc raspunsul unde este cazul. Cu aceasta clasa API.cs am realizat legătura dintre GUI si informațiile din baza de date prin accesarea metodelor din TryConnect.cs.
+cerere:  input GUI-> API.cs-> TryConnect.cs
+raspuns: GUI <- API.cs <- TryConnect.cs

@@ -1,0 +1,16 @@
+C:\Users\acer\source\repos\PROIECT_GALERIE\HostWCF\bin\Release\HostWCF.exe.config
+C:\Users\acer\source\repos\PROIECT_GALERIE\HostWCF\bin\Release\HostWCF.exe
+C:\Users\acer\source\repos\PROIECT_GALERIE\HostWCF\bin\Release\HostWCF.pdb
+C:\Users\acer\source\repos\PROIECT_GALERIE\HostWCF\bin\Release\OBJECTWFC.dll
+C:\Users\acer\source\repos\PROIECT_GALERIE\HostWCF\bin\Release\System.ServiceModel.Primitives.dll
+C:\Users\acer\source\repos\PROIECT_GALERIE\HostWCF\bin\Release\PROIECT_GALERIE.dll
+C:\Users\acer\source\repos\PROIECT_GALERIE\HostWCF\bin\Release\EntityFramework.dll
+C:\Users\acer\source\repos\PROIECT_GALERIE\HostWCF\bin\Release\OBJECTWFC.pdb
+C:\Users\acer\source\repos\PROIECT_GALERIE\HostWCF\bin\Release\System.ServiceModel.Primitives.pdb
+C:\Users\acer\source\repos\PROIECT_GALERIE\HostWCF\bin\Release\PROIECT_GALERIE.pdb
+C:\Users\acer\source\repos\PROIECT_GALERIE\HostWCF\bin\Release\PROIECT_GALERIE.dll.config
+C:\Users\acer\source\repos\PROIECT_GALERIE\HostWCF\bin\Release\EntityFramework.xml
+C:\Users\acer\source\repos\PROIECT_GALERIE\HostWCF\obj\Release\HostWCF.csprojAssemblyReference.cache
+C:\Users\acer\source\repos\PROIECT_GALERIE\HostWCF\obj\Release\HostWCF.csproj.CopyComplete
+C:\Users\acer\source\repos\PROIECT_GALERIE\HostWCF\obj\Release\HostWCF.exe
+C:\Users\acer\source\repos\PROIECT_GALERIE\HostWCF\obj\Release\HostWCF.pdb

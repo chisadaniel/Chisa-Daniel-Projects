@@ -1,0 +1,5 @@
+Every folder contains a directory 'Clases' that consists of files that forms every part of the application elements.(Model,API,Client, Host, ObjectWCF)
+
+
+
+ 

@@ -1,0 +1,16 @@
+C:\Users\acer\source\repos\PROIECT_GALERIE\OBJECTWFC\bin\Debug\OBJECTWFC.dll
+C:\Users\acer\source\repos\PROIECT_GALERIE\OBJECTWFC\bin\Debug\OBJECTWFC.pdb
+C:\Users\acer\source\repos\PROIECT_GALERIE\OBJECTWFC\bin\Debug\PROIECT_GALERIE.dll
+C:\Users\acer\source\repos\PROIECT_GALERIE\OBJECTWFC\bin\Debug\System.ServiceModel.Primitives.dll
+C:\Users\acer\source\repos\PROIECT_GALERIE\OBJECTWFC\bin\Debug\EntityFramework.dll
+C:\Users\acer\source\repos\PROIECT_GALERIE\OBJECTWFC\bin\Debug\PROIECT_GALERIE.pdb
+C:\Users\acer\source\repos\PROIECT_GALERIE\OBJECTWFC\bin\Debug\PROIECT_GALERIE.dll.config
+C:\Users\acer\source\repos\PROIECT_GALERIE\OBJECTWFC\bin\Debug\System.ServiceModel.Primitives.pdb
+C:\Users\acer\source\repos\PROIECT_GALERIE\OBJECTWFC\bin\Debug\EntityFramework.xml
+C:\Users\acer\source\repos\PROIECT_GALERIE\OBJECTWFC\obj\Debug\OBJECTWFC.csprojAssemblyReference.cache
+C:\Users\acer\source\repos\PROIECT_GALERIE\OBJECTWFC\obj\Debug\OBJECTWFC.csproj.CopyComplete
+C:\Users\acer\source\repos\PROIECT_GALERIE\OBJECTWFC\obj\Debug\OBJECTWFC.dll
+C:\Users\acer\source\repos\PROIECT_GALERIE\OBJECTWFC\obj\Debug\OBJECTWFC.pdb
+C:\Users\acer\source\repos\PROIECT_GALERIE\OBJECTWFC\bin\Debug\OBJECTWFC.dll.config
+C:\Users\acer\source\repos\PROIECT_GALERIE\OBJECTWFC\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\acer\source\repos\PROIECT_GALERIE\OBJECTWFC\bin\Debug\EntityFramework.SqlServer.xml

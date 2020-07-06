@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="24fa0e4f929e42a5834dc99610a17ae8" Name="Diagram1" ZoomLevel="131" >
+        <EntityTypeShape EntityType="Galerie.Properties" Width="1.5" PointX="6.875" PointY="1.125" />
+        <EntityTypeShape EntityType="Galerie.Media" Width="1.5" PointX="3.875" PointY="1.375" />
+        <AssociationConnector Association="Galerie.MediaProperties" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

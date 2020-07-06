@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Galerie.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="GalerieStoreContainer">
+    <EntitySet Name="PropertiesSet" EntityType="Galerie.Store.PropertiesSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MediaSet" EntityType="Galerie.Store.MediaSet" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="MediaProperties" Association="Galerie.Store.MediaProperties">
+      <End Role="Media" EntitySet="MediaSet" />
+      <End Role="Properties" EntitySet="PropertiesSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="PropertiesSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="MediaId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MediaSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Path" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="MediaProperties">
+    <End Role="Media" Type="Galerie.Store.MediaSet" Multiplicity="1" />
+    <End Role="Properties" Type="Galerie.Store.PropertiesSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Media">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Properties">
+        <PropertyRef Name="MediaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

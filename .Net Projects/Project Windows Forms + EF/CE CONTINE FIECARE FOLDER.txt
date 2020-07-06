@@ -1,0 +1,1 @@
+Fiecare folder (MODEL,API,GUI) conține câte un folder CLASE în care am adăugat documentele aferente fiecărei părți și un document explicativ.

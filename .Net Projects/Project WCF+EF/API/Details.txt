@@ -1,0 +1,4 @@
+In the 'Clases' folder stands TryConnect.cs class that consists off class library api that interacts with the database.
+API.cs is a class that belongs to GUI and is made of class methods that call functions from TryConnect.cs by proxy class instance MediaPropertiesClient.
+
+ 

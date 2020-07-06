@@ -1,0 +1,11 @@
+C:\Users\acer\source\repos\PROIECT_GALERIE\PROIECT_GALERIE\obj\Debug\PROIECT_GALERIE.csprojAssemblyReference.cache
+C:\Users\acer\source\repos\PROIECT_GALERIE\PROIECT_GALERIE\bin\Debug\PROIECT_GALERIE.dll.config
+C:\Users\acer\source\repos\PROIECT_GALERIE\PROIECT_GALERIE\bin\Debug\PROIECT_GALERIE.dll
+C:\Users\acer\source\repos\PROIECT_GALERIE\PROIECT_GALERIE\bin\Debug\PROIECT_GALERIE.pdb
+C:\Users\acer\source\repos\PROIECT_GALERIE\PROIECT_GALERIE\bin\Debug\EntityFramework.dll
+C:\Users\acer\source\repos\PROIECT_GALERIE\PROIECT_GALERIE\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\acer\source\repos\PROIECT_GALERIE\PROIECT_GALERIE\bin\Debug\EntityFramework.xml
+C:\Users\acer\source\repos\PROIECT_GALERIE\PROIECT_GALERIE\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\acer\source\repos\PROIECT_GALERIE\PROIECT_GALERIE\obj\Debug\PROIECT_GALERIE.csproj.CopyComplete
+C:\Users\acer\source\repos\PROIECT_GALERIE\PROIECT_GALERIE\obj\Debug\PROIECT_GALERIE.dll
+C:\Users\acer\source\repos\PROIECT_GALERIE\PROIECT_GALERIE\obj\Debug\PROIECT_GALERIE.pdb
