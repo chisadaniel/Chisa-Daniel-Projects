@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cc-tema4-cdn.azureedge.net/team4/style.css">
+    <link rel="stylesheet"  type="text/css" href="anim.css">
+<style>
+button{
+  background-color: DodgerBlue;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 1%;
+  border: none;
+  font-size: 1.5em;
+  width: 160px;
+  border-radius: 10px;
+}
+input[type=checkbox]
+{
+  -webkit-appearance:checkbox;
+
+}
+input{
+    text-align: center;
+}
+.checkBtn{
+    width: 40px;
+    height: 40px;
+    background-color: white;
+     outline: none;
+     background-repeat: no-repeat;
+}
+.checkBtn:active { border-style: outset;}
+
+.checkBtn.button.active.focus,.checkBtn.active:focus,
+.checkBtn.focus, .checkBtn:active.focus, 
+.checkBtn:active:focus, .checkBtn:focus {
+  outline: none;
+  box-shadow: none;
+  background-color: white;
+}
+label{
+    font-size: 3em;
+     
+}
+
+#addBtn{
+    background-image:url('https://tasksstorage2020.blob.core.windows.net/images/plus.png');
+    background-size:40px 40px;
+}
+
+</style>
+</head>
+<body>
+<div class="area" >
+            <ul class="circles">
+                    <li>  </li>
+                    <li> </li>
+                    <li> </li>
+                    <li> </li>
+                    <li> </li>
+                    <li> </li>
+                    <li> </li>
+                    <li> </li>
+                    <li> </li>
+                    <li> </li>
+            </ul>
+    <div class="main larger card">
+        <div class="card-content">
+            <h3>Your tasks</h3>
+            <p><smal><a href="/logout" class="logout-btn">Disconnect</a></smal></p>
+            <p id="status"></p>
+            <form action="" class="form_add_task row">
+                <div class="input-field col s12">
+                    <input id="task_desc" type="text" name="task_desc">
+                    <label class="active" for="task_desc">Type your task here</label>
+                    <button type="button" class="checkBtn" id="addBtn" onclick="addTask()"></button>
+                </div>
+
+            </form>
+        </div>
+        <div  id="taskSpace">
+
+                 
+        </div>
+    </div>
+</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="https://tasksstorage2020.blob.core.windows.net/asset-9e882f70-a75a-4b24-825f-6c0445335f2c/tasks_script.js"></script>
+</body>
+</html>
