@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Laboratory Attendence</title>
+    <link rel="icon" type="image/png" href="icons/fav.png" />
+
+    <link rel="stylesheet"  type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet"  type="text/css" href="style.css">
+    <link rel="stylesheet"  type="text/css" href="anim.css">
+</head>
+<body>
+      <div class="area" >
+            <ul class="circles">
+                    <li>  </li>
+                    <li> </li>
+                    <li> </li>
+                    <li> </li>
+                    <li> </li>
+                    <li> </li>
+                    <li> </li>
+                    <li> </li>
+                    <li> </li>
+                    <li> </li>
+            </ul>
+    
+
+
+    <div class="main card" style="border-radius: 15px;">
+
+        <div class="card-content" style="background: orange;border-radius: 15px;">
+
+            <!--<div> <button id="profsBtn" onclick="hideStudentsLogin()" type="button">Profs</button></div>-->
+            <img width="10%" height="10%" style="border-radius: 10px;" src="icons/apple-icon-76x76.png">
+
+            <p class="text-center">Laboratory Attendence</p>
+             
+            <h3 id="loginTitle" style="display: none;">Login</h3>
+
+            
+             
+                <div id="studentBox" class="boxinside"  >
+                    <p>I'm a student</p>
+                    <img width="80%" style="margin-left: 10%;" src="student.png">
+                </div>
+                <div id="profsBox"  class="boxinside">
+                    <p>I'm a professor</p>
+                    <img width="80%" style="margin-left: 10%;" src="teacher.png">
+                </div>
+            <div id="backBox" style="display: none;">
+            <span id="backBtn" style="margin-left: -36%;"><img width="40px" height="40px" style="cursor: pointer;" src="gobackarrow.png"></span>
+            <span id="miniTitle" style="color:black;font-size: 14px; margin-left: 25%;"></span>
+            </div>
+            <p id="status" style="color:red;"></p>
+            <form id="firstForm" style="display: none;" class="login_form"  action="/api/login" method="POST">
+                <div class="input-field col s12">
+                    <input id="input_email" name="mail" type="email" class="validate" required>
+                    <label for="input_email">Email address</label>
+                </div>
+                <div class="input-field col s12">
+                    <input id="input_pass" name="pass" type="password" class="validate" required>
+                    <label for="input_pass">Password</label>
+                </div>
+                <div class="text-center">
+                    <input type="button" id="loginStuds" class="btn deep-orange" text="send" value="Enter">
+
+                    <em class="lower-text">Don't have an account yet? <a href="/register">Register here</a></em>
+                    <em class="lower-text"><a href="/forgot">Forgot password?</a></em>
+                </div>
+            </form>
+            <form id="secondForm" style="display: none;" class="login_form"  action="/api/login/profs" method="POST">
+                <div class="input-field col s12">
+                    <input id="input_email1" name="mail" type="email" class="validate" required>
+                    <label for="input_email1">Email address</label>
+                </div>
+                <div class="input-field col s12">
+                    <input id="input_pass1" name="pass" type="password" class="validate" required>
+                    <label for="input_pass1">Password</label>
+                </div>
+                <div class="text-center">
+                    <input type="button" id="loginProfs" class="btn deep-orange" text="send" value="Enter">
+
+                    <em class="lower-text">Don't have an account yet? <a href="/register">Register here</a></em>
+                    <em class="lower-text"><a href="/forgot">Forgot password?</a></em>
+                </div>
+            </form>
+
+        </div>
+    </div>
+    </div >
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script type="text/javascript" src="script.js"></script>
+   
+   
+   
+</body>
+</html>

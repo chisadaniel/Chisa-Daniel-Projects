@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+ 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Lectures Overview</title>
+    <link rel="icon" type="image/png" href="icons/fav.png" />
+
+<script lang="javascript" src="xlsx.core.min.js"></script>
+<script lang="javascript" src="FileSaver.js"></script>
+<script type="text/javascript" src="jquery.min.js"></script>
+<script src="tableexport.js"></script>
+<script src="saveAsExcel.js"></script>
+<style type="text/css">
+ body {
+  font-family: "Lato", sans-serif;
+  transition: background-color .5s;
+  background: #4e54c8;  
+    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
+}
+
+/*MENU STYLE*/
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+  text-align: right;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+#body{
+  text-align: center;
+}
+
+/*SEARCH STYLE*/
+/*the container must be positioned relative:*/
+.autocomplete {
+  position: relative;
+  display: inline-block;
+}
+
+input {
+  border: 1px solid transparent;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 16px;
+}
+
+input[type=text] {
+  background-color: #f1f1f1;
+  width: 100%;
+  margin-top: 1%;
+}
+
+input[type=submit] {
+  background-color: DodgerBlue;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 1%;
+
+}
+
+button{
+  background-color: DodgerBlue;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 1%;
+  border: none;
+  font-size: 1.5em;
+}
+
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff; 
+  border-bottom: 1px solid #d4d4d4; 
+}
+
+/*when hovering an item:*/
+.autocomplete-items div:hover {
+  background-color: #e9e9e9; 
+}
+
+/*when navigating through the items using the arrow keys:*/
+.autocomplete-active {
+  background-color: DodgerBlue !important; 
+  color: #ffffff; 
+}
+
+form,p{
+ text-align: center;
+}
+
+.middle{
+  text-align: center;
+}
+.middle input{
+  width: 45%;
+  text-align: center;
+}
+
+#studentsList{
+  text-align: center;
+}
+#studentsList input{
+  width: 50px;
+  text-align: center;
+}
+#studentsList table{
+   font-family: "Lato", sans-serif; 
+   text-align: center;
+   border-collapse: collapse; 
+   border: 1px solid black;
+   background-color: white;
+   
+
+}
+
+#myInput{
+  width: 133%;
+  text-align: center;
+  margin-left: -21.5%; 
+  border-radius: 5px;
+  background-color: #FFD662;
+}
+ 
+td,tr{
+    border-left: 1px solid black;
+}
+#download button{
+ background: url('download.png');
+ width: 30px;
+ height: 30px;
+}
+/*loader*/
+.loader {
+  margin: auto;
+  border: 16px solid #FFD662;
+  border-radius: 50%;
+  border-top: 16px solid #615550;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#status{
+  font-size: 1.5em;
+  font-weight: 900;   
+}
+
+#selectBox{
+  display: none;
+  margin-top: 1%;
+  position: absolute;
+}
+ 
+.input-with-icon {
+  position: relative;
+  box-sizing: border-box;
+  width: 330px;
+}
+
+.input-with-icon .form-control {
+    height: 100%;
+    width: 330px;
+    padding-right: 50px;
+    box-sizing: border-box;
+}
+
+.input-with-icon .icon {
+  position: absolute;
+
+  /*   input box  */
+  right: -30px;
+  top: 0.1rem;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 0.3rem;
+
+  /*  icon div   */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+#selectBox{
+  width: 440px;
+  margin-left: -21.5%;
+}
+#searchStudentInput{
+  width: 330px;
+  float: left;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #FFD662;
+}
+
+#teacherBtn{
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+
+}  
+#ownerBtn{
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  margin-left: -5%;
+}
+.badge {
+  font-size: 13px;
+  position: absolute;
+  top: 17px;
+  right: 56px;
+  padding: 5px 10px;
+  border-radius: 50%;
+  background-color: red;
+  color: white;
+}
+
+</style>
+</head>
+<body>
+
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <p id="teacherBtn" style="color:#FFD662; ">+ TEACHER SECTION</p>
+  <div style="display: none;" id="profSection">
+  <a href="/create">Create lab session</a>
+  <a href="/profs">Start session</a>
+  <a href="/manage">My labs manager</a>
+  <a href="/overview">My labs overview</a>
+  </div>
+  <p id="ownerBtn" style="color:#FFD662; ">+ LECTURE OWNER</p>
+  <div style="display: none;" id="ownSection">
+  <a href="/lecture">Create lecture</a>
+  <a href="/grading">My lectures grading</a>
+  <a href="/lectures">My lectures overview</a>
+  <a href="/lectures_infos">My lectures</a>
+  </div>
+</div>
+
+<div id="main">
+  <span style="font-size:40px;color:#F5D6C6; cursor:pointer" onclick="openNav()">&#9776;</span>
+  <span><a href='/profs'><img style="border-radius: 7px;" width="35px" height="35px" src="home2.png"></a></span>
+  <span>
+    <a href='/messenger'>
+      <span>
+        <img width="40px" height="35px" src="inbox.png">
+      </span>
+      <span style="display: none" class="badge" id="countSeen">5</span>
+    </a>
+  </span>
+  <span><a href='/logout'><img width="35px" height="35px" src="logout.png"></a></span>
+</div>
+
+ <div class="middle">
+  <H2 style="margin-left: -2%;">LECTURES INFOS</H2>
+ </div>
+<p>#CODE must be provided to the teachers you want to be able to create laboratory sessions for a certain lecture!</p>
+ 
+<div id="loadCircle" style="display: none;margin-top: 10%;"   class="loader"></div>
+ 
+<div id="studentsList"> 
+</div>
+
+</body>
+<script type="text/javascript"  src="lectures_infos_script.js"></script>
+<script type="text/javascript"  src="notify.js"></script>
+</html>

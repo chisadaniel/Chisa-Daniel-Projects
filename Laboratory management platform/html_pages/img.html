@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+<img src="https://storage.cloud.google.com/profiles-labattend/people.png" width="50px" height="50px" alt="img">
+ 
+  Select image to upload:
+  <form action="fileupload" method="POST" enctype="multipart/form-data">
+  <input  accept="image/*" type="file" name="filetoupload" id="fileToUpload">
+  <input type="submit">
+  </form>
+ <p><img id="output" width="200" /></p>
+
+</body>
+<script type="text/javascript" src="jquery.min.js"></script>
+<script>
+async function sendImg(event){
+	var image = document.getElementById('output');
+	image.src = URL.createObjectURL(event.target.files[0]);
+	var url = URL.createObjectURL(event.target.files[0])
+	 await $.post("/send_image",{
+    image: URL.createObjectURL(event.target.files[0])
+  }).done(function(){
+          console.log("gata requestul")
+      });   
+}	
+
+
+
+</script>
+</html>

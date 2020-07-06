@@ -1,0 +1,49 @@
+{
+  "name": "appengine-datastore",
+  "description": "Sample for Google Cloud Datastore on Google App Engine.",
+  "version": "0.0.1",
+  "private": true,
+  "license": "Apache-2.0",
+  "author": "Google Inc.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GoogleCloudPlatform/nodejs-docs-samples.git"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "system-test": "mocha --exit test/*.test.js",
+    "test": "npm run system-test"
+  },
+  "dependencies": {
+    "@google-cloud/datastore": "^5.0.0",
+    "@google-cloud/storage": "^5.0.1",
+    "blob": "^0.1.0",
+    "bluebird": "^3.7.2",
+    "express": "^4.16.4",
+    "express-session": "^1.17.0",
+    "file-saver": "^2.0.2",
+    "file-server": "^2.1.0",
+    "formidable": "^1.2.2",
+    "fs": "0.0.1-security",
+    "jquery": "^3.5.0",
+    "nodemailer": "^6.4.6",
+    "sheetjs": "^2.0.0",
+    "tableexport": "^5.2.0"
+  },
+  "devDependencies": {
+    "mocha": "^7.0.0",
+    "supertest": "^4.0.2"
+  },
+  "cloud-repo-tools": {
+    "test": {
+      "app": {
+        "msg": "Last 10 visits:"
+      }
+    },
+    "requiresKeyFile": true,
+    "requiresProjectId": true
+  }
+}
